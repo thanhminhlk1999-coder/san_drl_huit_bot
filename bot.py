@@ -126,7 +126,8 @@ def handle_commands_once(cid, offset, history, users, extra_sources):
             if not text or not cid:
                 continue
 
-            cmd = text.split(/\s+/)[0].split("@")[0].lower()
+            cmd = text.split()[0].split("@")[0].lower()
+
 
             if cmd == "/add":
                 new_link = re.sub(r"^/add(@\w+)?\s*", "", text).strip()
